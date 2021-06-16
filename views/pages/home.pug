@@ -8,7 +8,7 @@ block content
     .home_wrapper 
       .home_titles
         each collection, index in collections 
-          .collections_title_label=`Collection` + ` ${Numbers(index)}`
+          .collections_title_label=`${home.data.collection} ${Numbers(index)}`
           .collections_titles_title=collection.data.title 
 
       .home_gallery 
@@ -16,5 +16,5 @@ block content
           figure.home_gallery_media 
             img.home_gallery_media_image(alt=media.image.alt src=media.image.url)
 
-    a(href='/collections')=home.data.button
+    a(href=Link(home.data.collections))=home.data.button
     
