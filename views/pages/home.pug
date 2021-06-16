@@ -1,0 +1,20 @@
+extends ../base.pug
+
+block variables 
+  - var template = 'home'
+
+block content 
+  .home 
+    .home_wrapper 
+      .home_titles
+        each collection, index in collections 
+          .collections_title_label=`Collection` + ` ${Numbers(index)}`
+          .collections_titles_title=collection.data.title 
+
+      .home_gallery 
+        each media in home.data.gallery 
+          figure.home_gallery_media 
+            img.home_gallery_media_image(alt=media.image.alt src=media.image.url)
+
+    a(href='/collections')=home.data.button
+    

@@ -1,0 +1,12 @@
+nav.navigation 
+  .navigation_wrapper 
+    a.navigation_link(href="/")
+      | Floema
+  
+      svg.navigation_link_icon 
+
+    ul.navigation_list 
+      each item in navigation.data.list
+        li.navigation_list_item
+          a.navigation_list_link(href=Link(item.link))=item.text
+      

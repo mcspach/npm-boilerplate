@@ -1,0 +1,27 @@
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewpoint" content="width=device-width, initial-scale=1.0")
+
+    base(href="/")
+
+    title 'npm boilerplate'
+
+    meta(name="description" content="npm boilerplate for badass node sites")
+
+    //- favicon
+
+    //- link(rel="preconnect" href="https://www.google-analytics.com")
+    //- link(rel="preconnect" href="https:fonts.gstatic.com")
+
+    link(href="main.css" rel="stylesheet")
+
+    body
+      include ./partials/preloader
+      include ./partials/navigation
+
+      .content#content(data-template=template)
+        block content
