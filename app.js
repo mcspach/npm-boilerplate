@@ -30,9 +30,12 @@ const handleLinkResolver = doc => {
     return '/details/' + doc.uid;
   } else if (doc.type === 'about') {
     return '/about';
-  }
+  } else if (doc.type === 'collections') {
+    return '/collections';
+  } else {
 //   // Default to homepage
   return '/';
+  }
 }
 
 // Initialize the prismic.io api

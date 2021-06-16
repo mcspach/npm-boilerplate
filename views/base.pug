@@ -8,13 +8,30 @@ html(lang="en")
 
     base(href="/")
 
-    title 'npm boilerplate'
+    title=meta.data.title
 
-    meta(name="description" content="npm boilerplate for badass node sites")
+    meta(name="description" content=meta.data.description)
 
     //- favicon
+    link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png")
+    link(rel="manifest" href="/site.webmanifest")
+    link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#fbf7ec")
+    meta(name="msapplication-TileColor" content="#fbf7ec")
+    meta(name="theme-color" content="#fbf7ec")
 
-    //- link(rel="preconnect" href="https://www.google-analytics.com")
+    meta(property="og:type" content="website")
+    meta(property="og:title" content=meta.data.title)
+    meta(property="og:description" content=meta.data.description)
+    meta(property="og:image" content=meta.data.image ? meta.data.image.url : '')
+
+    meta(name="twitter:card" content="summary_large_image")
+    meta(name="twitter:title" content=meta.data.title)
+    meta(name="twitter:description" content=meta.data.description)
+    meta(name="twitter:image" content=meta.data.image ? meta.data.image.url : '')
+
+    link(rel="preconnect" href="https://www.google-analytics.com")
     //- link(rel="preconnect" href="https:fonts.gstatic.com")
 
     link(href="main.css" rel="stylesheet")
